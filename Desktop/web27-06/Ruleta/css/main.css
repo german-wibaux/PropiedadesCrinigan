@@ -1,0 +1,65 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #003700;
+	text-align: center;
+	font-family: Verdana, "Times New Roman";
+	color: white;
+}
+
+body div {
+	padding: 5px;
+	margin: 5px;
+}
+
+.otherBets, .betNumbers {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.otherBets > div > div {
+	width: 200px;
+	text-align: left;
+}
+
+button {
+ 	width: 30px;
+ 	height: 30px;
+	padding: 5px 10px;
+	margin: 0 5px;
+}
+
+#playRoulette, #changeColors {
+	width: 150px;
+	height: 50px;
+}
+
+.cero {
+	width: 80px;
+}
+
+.red, .black, .white {
+	border: 1px solid white;
+	font-weight: bold;
+	color: white;
+}
+
+.red {
+	background-color: #BF0000;
+}
+
+.black {
+	background-color: black;
+}
+
+.white {
+	background-color: white;
+	color: black!important;
+}
+
+.aclaracion {
+	font-size: 12px;
+}

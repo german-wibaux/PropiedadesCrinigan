@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="roulette">
+				<div> 
+					<p>Creditos: <span id="credits"></span></p>
+					<p>Numero Ganador: <span id="numberWin"></span></p>
+				</div>
+				<div>
+					<p>Apuestas echas:</p>
+					<ul id="bets">
+					</ul>
+				</div>
+				<div class="betNumbers">
+					<div>
+						<button class="white cero" id="0">0</button>
+					</div>
+					<div>
+						<button class="red" id="1">1</button>
+						<button class="black" id="2">2</button>
+					</div>
+					<div>
+						<button class="red" id="3">3</button>
+						<button class="black" id="4">4</button>
+					</div>
+					<div>
+						<button class="red" id="5">5</button>
+						<button class="black" id="6">6</button>
+					</div>
+					<div>
+						<button class="red" id="7">7</button>
+						<button class="black" id="8">8</button>
+					</div>
+					<div>
+						<button class="red" id="9">9</button>
+						<button class="black" id="10">10</button>
+					</div>
+				</div>
+				<div class="otherBets">
+					<div>
+						<div>
+							<button class="red color" id="11">11</button>
+							<span>Rojo</span>
+						</div>
+						<div>
+							<button class="black color" id="12">12</button>
+							<span>Negro</span>
+						</div>
+					</div>
+					<div>
+						<div>
+							<button class="white" id="13">13</button>
+							<span>Par</span>
+						</div>
+						<div>
+							<button class="white" id="14">14</button>
+							<span>Impar</span>
+						</div>
+					</div>
+					<div>
+						<div>
+							<button class="white" id="15">15</button>
+							<span>Menor<span class="aclaracion"> (no incluye el 0)</span></span>
+						</div>
+						<div>
+							<button class="white" id="16">16</button>
+							<span>Mayor</span>
+						</div>
+					</div>
+				</div>
+				<div>
+					<span id="premios"></span>	
+				</div>
+		</div>	
+
+		<button id="playRoulette">Lanzar Ruleta</button>
+		<button id="changeColors">Modificar colores de cada numero</button>
+
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="js/numerosRojos.js"></script>
+		<script type="text/javascript" src="js/ruleta.js"></script>
+
+	</body>
+</html>
