@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" ng-app="miAplicacion">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Propiedades - Chalita Crinigan</title>
+
+<link href="../static/css/personalizado.css" rel="stylesheet" type="text/css">
+
+<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<link href="../static/css/style.css" rel="stylesheet" type="text/css">
+
+
+<link href="../static/css/animate.css" rel="stylesheet" type="text/css">
+<link href="../static/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<link href="../static/css/photobox.css" rel="stylesheet" type="text/css">
+<!--<link href="css/revolution-slider.css" rel="stylesheet" type="text/css">
+<link href="css/owl.carousel.css" rel="stylesheet" type="text/css">-->
+<link href="../static/css/responsive.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Ruluko' rel='stylesheet' type='text/css'>
+<!-- Slider CSS -->
+<link href="../static/css/half-slider.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+<header>
+	<div class="container-header-index">
+		<div class="navigation clearfix">
+			<div class="logo"><a href="index.html"><img src="../static/images/logo-img.png" alt="#" /> </a></div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar first"></span> <span class="icon-bar middle"></span> <span class="icon-bar last"></span> </button>
+			</div>
+			<div class="menu">
+				<nav class="navbar navbar-default">
+					<div id="navbar" class="navbar-collapse collapse pull-right">
+						<ul class="nav navbar-nav">
+							<li class="active"><a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="index.html">Inicio</a>
+								<ul class="dropdown-menu" role="menu">
+									
+								</ul>
+							</li>
+							<li><a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Alquileres</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="{% url "alquileresTemp" %}">Alquileres Temporarios</a></li>
+									<li><a href="{% url "alquileresPerman" %}">Alquileres Permanentes</a></li>
+								</ul>
+							</li>
+							<li><a href="{% url "venta" %}">Ventas</a></li>
+							<li><a href="">Turismo</a></li>
+							<li><a href="#nosotros">Nosotros</a></li>
+							<li><a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Contacto</a>
+								<ul class="dropdown-menu" role="menu">
+
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="redes-sociales-bar">
+			<ul class="">
+				<li class=""> <a href="https://www.facebook.com/profile.php?id=100006000856262&fref=ts"><img src="../static/images/redes-sociales/icon-face.png"></a></li>
+				<li class=""><a href="#"><img src="../static/images/redes-sociales/icon-twitter.png"></a></li>
+				<li class=""><a href="#"><img src="../static/images/redes-sociales/wtsp.png"></a></li>
+			</ul>
+		</div>
+	</div>
+
+ 
+
+</header>
+	
+<div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('/static/images/5.jpg');"></div>
+                
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../static/images/4.jpg');"></div>
+
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../static/images/1.jpg');"></div>
+
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('../static/images/2.jpg');"></div>
+
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+</div>
+
+<div class="filtro texto-prop">
+	<div class="container">
+	  <div class="row">
+        <div class="col-lg-12">
+            <div>
+                <form name="myForm" class="form-group" method="post" action="{% url 'filtrar' %}">
+                		{% csrf_token %}
+                        {% for f in form %}
+							<div class="col-xs-3"> 
+                        	<label>{{f.label_tag}}</label>
+                            <div name="mySelect" id="mySelect"
+                             class="form-control" placeholder=".col-xs-3">
+                            {{ f }}</div>
+                        </div>                        
+                        {%  endfor %}
+                        <div class="col-xs-3 lupa">
+                        <!--	<input type="submit" value="Buscar">-->
+                        <input type="image" src="../static/images/lupa.png" alt="Submit" width="40" height="40">
+                        </div>
+                </form>
+            </div>
+        </div>
+  	</div> 
+  </div>
+</div> 
+
+		<!--	<div id="flights" class="tab-pane fade">
+				<div class="search-options">
+					<div class="search-form">
+						<form id="flight-search" name="propertysearch" method="post">
+							<div class="form-inner">
+								<div class="left-options col-md-6">
+									<div class="form-section col-md-6">
+										<label>Propert ID</label>
+										<input class="form-control" placeholder="ANY">
+									</div>
+									<div class="form-section col-md-6">
+										<label>Property Location</label>
+										<div class="select-box">
+											<select class="form-control" name="dropdown">
+												<option value="ANY">ANY</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-section col-md-6">
+										<label>Rooms</label>
+										<input class="form-control" placeholder="1">
+									</div>
+									<div class="form-section col-md-6">
+										<label>Number of Guests</label>
+										<div class="select-box">
+											<select class="form-control" name="dropdown">
+												<option value="5">5</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="right-options col-md-6">
+									<div class="form-section col-md-6">
+										<label>Property Status</label>
+										<div class="select-box">
+											<select class="form-control" name="dropdown">
+												<option value="ANY">ANY</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-section col-md-6">
+										<label>Property Type</label>
+										<div class="select-box">
+											<select class="form-control" name="dropdown">
+												<option value="Choose">CHOOSE</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-section col-md-6">
+										<p>
+											<label for="amount">Define a price</label>
+											<input type="text" id="amount2" readonly style="border:0; color:#fa8526; font-weight:bold;">
+										</p>
+										<div id="slider-range2"><span class="minvalue">MIN</span><span class="maxvalue">MAX</span></div>
+									</div>
+									<div class="form-section col-md-6">
+										<div class="search-btn"> <a href="#">SEARCH FOR IT</a> </div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div> -->
+<section>
+<div class="top-tabs-as">
+	<div class="container">
+		<div class="tab-content clearfix texto-prop">
+			Agradecemos su visita. Nos interesa su <a href="">opinión y sugerencias</a>  para mejorar nuestro servicio		
+		</div>
+	</div>
+</div>		
+
+	<div class="etiqueta">Ultimas Propiedades</div>
+	<div class="container-index">
+		<div class="meet-client animated out" data-delay="0" data-animation="fadeInUp">
+			<div class="row">
+				<div class="col-md-3 col-sm-4 mrgb8x animated out" data-delay="0" data-animation="fadeInUp">
+					<div class="agent-profile">
+						<div class="agent-img"><img src="../static/images/propiedades/campo07.jpg" class="img-responsive" alt="#" />
+							<div class="img-hover"> <a href="../static/images/agent-1.jpg" class="plus-link"></a></div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 mrgb8x animated out" data-delay="0" data-animation="fadeInUp">
+					<div class="agent-profile">
+						<div class="agent-img"> <img src="../static/images/propiedades/madariaga03.jpg" class="img-responsive" alt="#" />
+							<div class="img-hover"> <a href="../static/images/agent-2.jpg" class="plus-link"></a></div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 mrgb8x animated out" data-delay="0" data-animation="fadeInUp">
+					<div class="agent-profile">
+						<div class="agent-img"> <img src="../static/images/propiedades/madariagav01.jpg" class="img-responsive" alt="#" />
+							<div class="img-hover"> <a href="../static/images/agent-3.jpg" class="plus-link"></a></div>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-4 mrgb8x animated out" data-delay="0" data-animation="fadeInUp">
+					<div class="agent-profile">
+						<div class="agent-img"> <img src="../static/images/propiedades/pinamarv06.jpg" class="img-responsive" alt="#" />
+							<div class="img-hover"> <a href="../static/images/agent-4.jpg" class="plus-link"></a></div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<div class="borde-naranja">
+<div id="nosotros" class="etiqueta">Nosotros</div>
+<div class="texto-prop-nos">
+<br>
+<br>
+Somos una empresa que presta servicios inmobiliarios. Nos dedicamos principalmente al turismo zonal en la costa atlántica, zona rural y poblaciones aledañas con fuerte interés en abrirse al turismo interno y externo. Disponemos de las herramientas para asesorar idóneamente. Tenemos base en General Madariaga, provincia de Buenos Aires, Argentina. Estamos habilitados por el Colegio de Martilleros y Corredores Públicos del Departamento Judicial de Dolores.<br><br>
+</div>
+</div>
+	
+<section class="bg-dark parallex mrgb4x bordes">
+	<div class="container">
+		<div class="inner-text">
+		<a href="">	<h2>MADARIAGA... Y MAS ALLA DEL PUEBLO GAUCHO</h2> </a>
+			<span> </span>
+
+		</div>
+	</div>
+</section>
+<!--	
+<div class="image1">
+
+</div>-->
+<footer class="bg-color">
+	<div class="container">
+		<div class="upper-footer clearfix">
+			<div class="widgets">
+				<div class="col-md-4">
+					<div class="about-widget"> <img src="../static/images/logo-img-min.jpg" class="img-responsive" alt="#" />
+						<div class="col1-footer">	
+							<ul>
+							<b><p>
+								<li><a href="#">Inicio</a></li><br>
+								<li><a href="#">Alquileres Temporarios</a></li><br>
+								<li><a href="#">Alquileres Permanentes</a></li><br>
+								<li><a href="{% url "venta" %}">Ventas</a></li><br>
+								<li><a href="#">Turismo</a></li><br>
+								
+							</p></b>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="widget-heading mrgb4x">
+						
+					</div>
+					<div class="col1-footer">
+					<ul class="widget-area">
+					<b><p>
+						<br>
+						<br>
+						<li class=""> <a href="https://www.facebook.com/profile.php?id=100006000856262&fref=ts"><img src="../static/images/redes-sociales/icon-face.png"> Seguinos en Facebook</a></li><br>
+						<li class=""><a href="#"><img src="../static/images/redes-sociales/icon-twitter.png"> Seguinos en Twitter</a></li><br>
+						<li><img src="../static/images/redes-sociales/wtsp.png"> (02267) - 15631530</li><br>
+					</p></b>						
+					</ul></div>
+				</div>
+				<div class="col-md-4">
+					<div class="widget-heading mrgb4x ">
+						<div class="col1-footer">
+						<ul>
+						<b><p><br>
+							<li>Nuestra Ubicacion</li>
+						</p></b>
+						</ul>
+						</div>
+					</div>
+					<div class="mapa-index">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18025.651829621715!2d-57.1355876233698!3d-36.99750463894275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1274767c40b1c929!2sChalita+Crinigan+Propiedades!5e0!3m2!1ses!2sar!4v1449250337891" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<script src="../static/js/jquery.js" type="text/javascript"></script>
+<script src="../static/js/bootstrap.js" type="text/javascript"></script> 
+<script src="../static/js/jquery.appear.js" type="text/javascript" ></script> 
+<script src="../static/js/jquery.mixitup.min.js" type="text/javascript" ></script> 
+<script src="../static/js/owl.carousel.min.js" type="text/javascript" ></script> 
+<script src="../static/js/jquery.photobox.js" type="text/javascript" ></script> 
+<script src="../static/js/jquery.themepunch.revolution.js" type="text/javascript"></script> 
+<script src="../static/js/jquery.themepunch.tools.min.js" type="text/javascript"></script> 
+<script src="../static/js/scripts.js" type="text/javascript"> </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script type="text/javascript" src="../static/js/miAplicacion.js"></script>
+
+  <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+    <!--<script src="js/jquery-ui.js" type="text/javascript"></script> -->
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+	-moz-box-sizing: border-box;	
+	box-sizing: border-box;
+}
+
+body, html {
+ margin: 0;
+ padding: 0;
+ height: 100%;
+}
+.sobre h1{
+  font-family: "Comic Sans MS";
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+/*nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.logo {
+  width: 150px;
+  background: red;
+  display: inline-block;
+  float: left;
+  margin: 10px 0 10px 50px;
+}
+
+.logo a,
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 4px 1px;
+}
+
+.main-nav a:hover {
+  border-bottom: 3px solid white;
+}
+
+.main-nav {
+  float: right;
+  padding: 0;
+  margin: 0;
+  background: blue;
+  margin: 10px 50px 10px 0;
+}
+
+.main-nav li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 25px 0 25px;
+  background-color: red;
+}*/
+
+
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.intro_container {
+  margin: 0;
+  padding: 0;
+  height: 50%;
+  width: 100%; 
+  background:   url(../images/turismo/el-pago.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   background-size: cover;
+   text-align: center;
+}
+
+
+.badge_container {
+  width: 100%;
+  position: absolute;
+  bottom: 42%;
+  text-align: center;
+}
+
+.intro_badge {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  background: white;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.arrow_container {
+  width: 100%;
+  position: absolute;
+  bottom: 6%;
+  text-align: center;
+}
+
+.arrow a {
+    border: 8px solid transparent;
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-color: blue;
+    background: url('http://lorempixel.com/40/40') no-repeat center;
+        -webkit-transition: border-color 0.5s ease-out;
+         -moz-transition: border-color 0.5s ease-in-out;
+           -o-transition: border-color 0.5s ease-in-out;
+          -ms-transition: border-color 0.5s ease-in-out;
+              transition: border-color 0.5s ease-in-out;  
+}
+
+.arrow a:hover {
+    border: 8px solid black;
+}
+
+.other-content {
+  width: 100%;
+  height: auto;
+  background: white;
+  margin: 0 auto 0 auto;
+  z-index: 99;
+  position: relative;
+  background: rgb(86,164,119);
+  
+}
+
+.background_contentone {
+ 
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 650px;
+  background: white;
+  margin: -200px auto 0 auto;
+  z-index: 98;
+  position: relative;
+  background:   url(../images/turismo/el-pago.jpg) no-repeat center center fixed; 
+   background-size: cover;
+   text-align: center;
+}
+
+.background_contenttwo {
+  width: 100%;
+  height: 650px;
+  background: white;
+  margin: -50px auto 0 auto;
+  z-index: 98;
+  position: relative;
+  background:   url(../images/turismo/el-pago.jpg) no-repeat center center fixed;
+   background-size: cover;
+   text-align: center;
+}

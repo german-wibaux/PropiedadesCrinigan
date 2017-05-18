@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detalles de propiedad - Chalita Crinigan</title>
+<meta name="description" content="Detalles de una propiedad en Madariaga, Pinamar o Maipú">
+<link rel="shortcut icon" type="image/png" href="/static/img/favicon.png">
+<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="/static/css/animate.css" rel="stylesheet" type="text/css">
+
+<link href="/static/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+<link href="/static/css/style.css" rel="stylesheet" type="text/css">
+<link href="/static/css/photobox.css" rel="stylesheet" type="text/css">
+<link href="/static/css/revolution-slider.css" rel="stylesheet" type="text/css">
+<link href="/static/css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link href="/static/css/responsive.css" rel="stylesheet" type="text/css">
+
+<link href="/static/css/personalizado.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/static/css/demo-galeria.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/style-galeria.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/elastislide.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+		<noscript>
+			<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+		</noscript>
+		<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					
+				</div>
+			</div>
+		</script>
+
+</head>
+
+<body>
+<header>
+	<div class="container-header">
+		<div class="navigation clearfix">
+			<div class="logo"><a href="{% url "" %}"><img src="/static/images/logo-img.png" alt="#" /> </a></div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar first"></span> <span class="icon-bar middle"></span> <span class="icon-bar last"></span> </button>
+			</div>
+			<div class="menu">
+				<nav class="navbar navbar-default">
+					<div id="navbar" class="navbar-collapse collapse pull-right">
+						<ul class="nav navbar-nav">
+							<li><a href="{% url "" %}">Inicio</a>
+							</li>
+							<li><a aria-expanded="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Alquileres</a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="{% url "alquileresTemp" %}">Alquileres temporarios</a></li>
+									<li><a href="{% url "alquileresPerman" %}">Alquileres permanentes</a></li>
+								</ul>
+							</li>
+							<li><a href="{% url "venta" %}">Ventas</a></li>
+							<li><a href="{% url "turismo" %}">Turismo</a></li>
+							<li><a href="{% url "" %}#nosotros">Nosotros</a></li>
+							<li><a href="{% url "contacto" %}">Contacto</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="redes-sociales-bar-psimple">
+			<ul class="">
+				<li class=""> <a href="https://www.facebook.com/profile.php?id=100006000856262&fref=ts"><img src="/static/images/redes-sociales/icon-face.png"></a></li>
+				<li class=""><a href="#"><img src="/static/images/redes-sociales/icon-twitter.png"></a></li>
+				<li class=""><a href="#"><img src="/static/images/redes-sociales/wtsp.png"></a></li>
+			</ul>
+		</div>
+	</div>
+
+ 
+
+</header>
+<section class="border-top">
+	<div class="container">
+		<div class="page-title mrgb6x mrgt6x clearfix">
+			<h4 class="page-name">Propiedad</h4>
+			<div class="tag-bar"> <a href="#"><span></span></a> </div>
+		</div>
+	</div>
+</section>
+<div class="container">
+<div class="row">
+  <div class="col-md-8 property-single-rightbar">
+	<div class="content">
+		<div id="rg-gallery" class="rg-gallery">
+			<div class="rg-thumbs">
+			<!-- Elastislide Carousel Thumbnail Viewer -->
+				<div class="es-carousel-wrapper">
+					<div class="es-nav">
+						<span class="es-nav-prev">Previous</span>
+						<span class="es-nav-next">Next</span>
+					</div>
+					<div class="es-carousel">
+							<ul>
+								{% if resultado.imagen1 %}
+								<li><a href="#"><img src="{{ resultado.imagen1.url }}" data-large="{{ resultado.imagen1.url }}" alt="image01" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen2 %}
+								<li><a href="#"><img src="{{ resultado.imagen2.url }}" data-large="{{ resultado.imagen2.url }}" alt="image02" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen3 %}
+								<li><a href="#"><img src="{{ resultado.imagen3.url }}" data-large="{{ resultado.imagen3.url }}" alt="image03" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen4 %}
+								<li><a href="#"><img src="{{ resultado.imagen4.url }}" data-large="{{ resultado.imagen4.url }}" alt="image04" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen5 %}
+								<li><a href="#"><img src="{{ resultado.imagen5.url }}" data-large="{{ resultado.imagen5.url }}" alt="image05" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen6 %}
+								<li><a href="#"><img src="{{ resultado.imagen6.url }}" data-large="{{ resultado.imagen6.url }}" alt="image06" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen7 %}
+								<li><a href="#"><img src="{{ resultado.imagen7.url }}" data-large="{{ resultado.imagen7.url }}" alt="image07" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen8 %}
+								<li><a href="#"><img src="{{ resultado.imagen8.url }}" data-large="{{ resultado.imagen8.url }}" alt="image08" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen9 %}
+								<li><a href="#"><img src="{{ resultado.imagen9.url }}" data-large="{{ resultado.imagen9.url }}" alt="image09" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen10 %}
+								<li><a href="#"><img src="{{ resultado.imagen10.url }}" data-large="{{ resultado.imagen10.url }}" alt="image10" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen11 %}
+								<li><a href="#"><img src="{{ resultado.imagen11.url }}" data-large="{{ resultado.imagen11.url }}" alt="image11" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen12 %}
+								<li><a href="#"><img src="{{ resultado.imagen12.url }}" data-large="{{ resultado.imagen12.url }}" alt="image12" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen13 %}
+								<li><a href="#"><img src="{{ resultado.imagen13.url }}" data-large="{{ resultado.imagen13.url }}" alt="image13" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen14 %}
+								<li><a href="#"><img src="{{ resultado.imagen14.url }}" data-large="{{ resultado.imagen14.url }}" alt="image14" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen15 %}
+								<li><a href="#"><img src="{{ resultado.imagen15.url }}" data-large="{{ resultado.imagen15.url }}" alt="image15" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen16 %}
+								<li><a href="#"><img src="{{ resultado.imagen16.url }}" data-large="{{ resultado.imagen16.url }}" alt="image16" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen17 %}
+								<li><a href="#"><img src="{{ resultado.imagen17.url }}" data-large="{{ resultado.imagen17.url }}" alt="image17" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen18 %}
+								<li><a href="#"><img src="{{ resultado.imagen18.url }}" data-large="{{ resultado.imagen18.url }}" alt="image18" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen19 %}
+								<li><a href="#"><img src="{{ resultado.imagen19.url }}" data-large="{{ resultado.imagen19.url }}" alt="image19" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen20 %}
+								<li><a href="#"><img src="{{ resultado.imagen20.url }}" data-large="{{ resultado.imagen20.url }}" alt="image20" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen21 %}
+								<li><a href="#"><img src="{{ resultado.imagen21.url }}" data-large="{{ resultado.imagen21.url }}" alt="image21" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen22 %}
+								<li><a href="#"><img src="{{ resultado.imagen22.url }}" data-large="{{ resultado.imagen22.url }}" alt="image22" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen23 %}
+								<li><a href="#"><img src="{{ resultado.imagen23.url }}" data-large="{{ resultado.imagen23.url }}" alt="image23" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen24 %}
+								<li><a href="#"><img src="{{ resultado.imagen24.url }}" data-large="{{ resultado.imagen24.url }}" alt="image24" data-description="" /></a></li>{% endif %}
+								{% if resultado.imagen25 %}
+								<li><a href="#"><img src="{{ resultado.imagen25.url }}" data-large="{{ resultado.imagen25.url }}" alt="image25" data-description="" /></a></li>{% endif %}
+							</ul>
+						</div>
+					</div>
+					<!-- End Elastislide Carousel Thumbnail Viewer -->
+				</div><!-- rg-thumbs -->
+			</div><!-- rg-gallery -->
+	</div><!-- content -->
+
+	
+	<div class="description-text col-md-13">
+		<div class="borde-gris">
+			<h5>Descripción</h5>
+		</div>	
+			<p> {{ resultado.descripcion}} </p>
+		<!--	<div class="booking-btn"> <a href="#" class="book-it"><i class="fa fa-angle-right"></i>BOOK IT NOW</a> </div>-->
+	</div>	
+	<div class="ubicacion titulo">
+		<div class="borde-gris">
+			<h5>{{ resultado.ubicacion }}</h5>
+		</div>
+	</div>
+
+	{% if resultado.geolocalizacion %}
+	<div class="mapa-propiedad">
+	
+		<!--<span class="description-title">Ubicación: </span><span class="title-detail">Madariaga</span>-->
+		
+		<iframe src="{{ resultado.geolocalizacion }}" width="750" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+	{% endif %}
+
+	</div>
+
+  	<div class="col-md-4">
+		<div class="barra-lateral-dere">
+			<div class="clearfix animated out" data-delay="0" data-animation="fadeInUp">
+			<b><p>Detalles de la Propiedad</b></p>
+
+			{% if resultado.tipoPropiedad.nombre == "Quinta" or resultado.tipoPropiedad.nombre == "Chacra" or resultado.tipoPropiedad.nombre == "Terreno/Lote" or resultado.tipoPropiedad.nombre == "Campo" or resultado.tipoPropiedad.nombre == "Loteo" %}
+			<ul class="">
+				<li><span class="titulo">Código: </span><span class="title-detail"> {{ resultado.codigo }} <br><br></span></li>
+
+				<li><span class="titulo">Estado: </span><span class="title-detail"> {{ resultado.estado }} <br><br></span></li>
+
+				<li><span class="titulo">Valor: </span><span class="title-detail"> {{ resultado.precio }} <br><br></span></li>
+
+				<li><span class="titulo">Superficie Cubierta (m<sup>2</sup>): </span><span class="title-detail"> {{ resultado.superficieCubierta }} <br><br></span></li>
+
+				<li><span class="titulo">Superficie De Lote (m<sup>2</sup>): </span><span class="title-detail"> {{ resultado.superficieTotal }} <br><br></span></li>
+			</ul>
+			
+			{% else %}
+			
+			<ul class="">
+				<li><span class="titulo">Código: </span><span class="title-detail"> {{ resultado.codigo }} <br><br></span></li>
+
+				<li><span class="titulo">Estado: </span><span class="title-detail"> {{ resultado.estado }} <br><br></span></li>
+
+				<li><span class="titulo">Valor: </span><span class="title-detail"> {{ resultado.precio }} <br><br></span></li>
+
+				<li><span class="titulo">Habitaciones: </span><span class="title-detail"> {{ resultado.habitaciones }} <br><br></span></li>
+
+				<li><span class="titulo">Baños: </span><span class="title-detail"> {{ resultado.banios }} <br><br></span></li>
+			
+				<li><span class="titulo">Cocheras: </span><span class="title-detail"> {{ resultado.cocheras }} <br><br></span></li>
+				
+				<li><span class="titulo">Superficie Cubierta (m<sup>2</sup>): </span><span class="title-detail"> {{ resultado.superficieCubierta }} <br><br></span></li>
+
+				<li><span class="titulo">Superficie De Lote (m<sup>2</sup>): </span><span class="title-detail"> {{ resultado.superficieTotal }} <br><br></span></li>
+			</ul>
+
+			{% endif %}
+
+		</div>
+		<!--///////////////////////////////FORMULARIO DE CONTACTO//////////////////////////////////////-->
+			<b><p>Contáctenos desde aquí</p></b>
+
+			<form method="post" class="form-group contacto" action="{% url "propiedadSimple" resultado.pk %}">
+				{% csrf_token %}
+				{{form2.as_p}}
+				<input type="submit" class="members__load-more">	
+			</form>
+
+
+			
+			
+		</div>
+	</div>
+
+  </div>
+</div>
+
+<div class="top-tabs-footer">
+	<div class="container-index">
+		<div class="tab-content clearfix texto-prop-gaucho">
+			
+		</div>
+	</div>
+</div>
+<footer class="bg-color">
+	<div class="container">
+		<div class="upper-footer clearfix">
+			<div class="widgets">
+				<div class="col-md-4 flotar">
+					<div class="about-widget"> <img src="/static/images/logo-img-min.jpg" class="img-responsive" alt="#" />
+						<div class="col1-footer">	
+							<ul>
+							<b><p>
+								<li><a href="{% url "" %}">Inicio</a></li><br>
+								<li><a href="{% url "alquileresTemp" %}">Alquileres temporarios</a></li><br>
+								<li><a href="{% url "alquileresPerman" %}">Alquileres permanentes</a></li><br>
+								<li><a href="{% url "venta" %}">Ventas</a></li><br>
+								<li><a href="#">Turismo</a></li><br>
+								
+							</p></b>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 flotar">
+					<div class="widget-heading mrgb4x">
+						
+					</div>
+					<div class="col1-footer">
+					<ul class="widget-area">
+					<b><p>
+						<br>
+						<br>
+						<li class=""> <a href="https://www.facebook.com/profile.php?id=100006000856262&fref=ts"><img src="/static/images/redes-sociales/icon-face.png"> Seguinos en Facebook</a></li><br>
+						<li class=""><a href="#"><img src="/static/images/redes-sociales/icon-twitter.png"> Seguinos en Twitter</a></li><br>
+						<li><img src="/static/images/redes-sociales/wtsp.png"> +54 9 2267 63-1530</li><br>
+					</p></b>						
+					</ul></div>
+				</div>
+				<div class="col-md-4 flotar">
+					<div class="widget-heading mrgb4x ">
+						<div class="col1-footer">
+						<ul>
+						<b><p><br>
+							<li>Nuestra ubicacion</li>
+						</p></b>
+						</ul>
+						</div>
+					</div>
+					<div class="mapa-index">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d18025.651829621715!2d-57.1355876233698!3d-36.99750463894275!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1274767c40b1c929!2sChalita+Crinigan+Propiedades!5e0!3m2!1ses!2sar!4v1449250337891" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<script src="/static/js/jquery.js" type="text/javascript"></script> 
+<script src="/static/js/bootstrap.js" type="text/javascript"></script> 
+<script src="/static/js/jquery-ui.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/js/jquery.appear.js"></script> 
+<script type="text/javascript" src="/static/js/owl.carousel.min.js"></script> 
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+<script type="text/javascript" src="/static/js/scripts.js"></script>
+<!-- Galeria -->
+<script type="text/javascript" src="/static/js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/static/js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="/static/js/gallery.js"></script>
+</body>
+</html>
